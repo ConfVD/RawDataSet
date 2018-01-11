@@ -1,0 +1,9 @@
+failed
+---------------#splitline#---------------
+ syntax error on line of
+ acceptpathinfo takes one argument set to on or off for path_info to be accepted by handlers or default for the per handler preference
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

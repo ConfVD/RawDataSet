@@ -1,0 +1,26 @@
+171218 04:45:59 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Unknown suffix '.' used for variable 'max_allowed_packet' (value '1.5M')
+171218  4:45:59 [Warning] option 'max_allowed_packet': unsigned value 0 adjusted to 1024
+171218  4:45:59 [ERROR] /usr/libexec/mysqld: Error while setting value '1.5M' to 'max_allowed_packet'
+171218  4:45:59 [ERROR] Aborting
+
+171218 04:45:59 mysqld_safe mysqld from pid file /var/run/mariadb/mariadb.pid ended
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 04:46:00 EST; 8s ago
+  Process: 40272 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 40271 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=0/SUCCESS)
+  Process: 40240 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 40271 (code=exited, status=0/SUCCESS)
+
+Dec 18 04:45:59 localhost.localdomain systemd[1]: Starting MariaDB database server...
+Dec 18 04:45:59 localhost.localdomain mariadb-prepare-db-dir[40240]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 04:45:59 localhost.localdomain mariadb-prepare-db-dir[40240]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 04:45:59 localhost.localdomain mysqld_safe[40271]: 171218 04:45:59 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Dec 18 04:45:59 localhost.localdomain mysqld_safe[40271]: 171218 04:45:59 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 04:46:00 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 04:46:00 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 04:46:00 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.
+Dec 18 04:46:09 localhost.localdomain systemd[1]: Stopped MariaDB database server.

@@ -1,0 +1,22 @@
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: deactivating (stop-sigterm) since Mon 2017-12-18 04:25:00 EST; 3ms ago
+  Process: 117577 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=0/SUCCESS)
+  Process: 117545 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 117576 (mysqld_safe)
+   CGroup: /system.slice/mariadb.service
+           ├─117576 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
+           └─118032 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/lib/mysql/localhost.localdomain.err --pid-file=/var/run/mariadb/mariadb.pid --socket=/var/lib/mysql/mysql.sock --port=3306
+
+Dec 18 04:24:50 localhost.localdomain mariadb-prepare-db-dir[117545]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 04:24:50 localhost.localdomain mysqld_safe[117576]: 171218 04:24:50 mysqld_safe unknown option '--='
+Dec 18 04:24:50 localhost.localdomain mysqld_safe[117576]: sed: -e expression #1, char 9: unknown option to `s'
+Dec 18 04:24:50 localhost.localdomain mysqld_safe[117576]: 171218 04:24:50 mysqld_safe unknown option ''
+Dec 18 04:24:50 localhost.localdomain mysqld_safe[117576]: sed: -e expression #1, char 10: unknown option to `s'
+Dec 18 04:24:50 localhost.localdomain mysqld_safe[117576]: 171218 04:24:50 mysqld_safe unknown option ''
+Dec 18 04:24:50 localhost.localdomain mysqld_safe[117576]: 171218 04:24:50 mysqld_safe Logging to '/var/lib/mysql/localhost.localdomain.err'.
+Dec 18 04:24:50 localhost.localdomain mysqld_safe[117576]: 171218 04:24:50 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 04:24:52 localhost.localdomain systemd[1]: Started MariaDB database server.
+Dec 18 04:25:00 localhost.localdomain systemd[1]: Stopping MariaDB database server...

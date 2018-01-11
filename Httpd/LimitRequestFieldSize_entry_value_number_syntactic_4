@@ -1,0 +1,45 @@
+[Tue Dec 26 08:58:21.147391 2017] [core:notice] [pid 128500] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Tue Dec 26 08:58:21.148022 2017] [suexec:notice] [pid 128500] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Dec 26 08:58:21.157906 2017] [auth_digest:notice] [pid 128500] AH01757: generating secret for digest authentication ...
+[Tue Dec 26 08:58:21.157962 2017] [auth_digest:debug] [pid 128500] mod_auth_digest.c(250): AH01759: done
+[Tue Dec 26 08:58:21.158711 2017] [slotmem_shm:debug] [pid 128500] mod_slotmem_shm.c(448): AH02301: attach looking for /run/httpd/slotmem-shm-mod_heartmonitor.shm
+[Tue Dec 26 08:58:21.158720 2017] [lbmethod_heartbeat:notice] [pid 128500] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 26 08:58:21.160448 2017] [proxy:debug] [pid 128501] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 08:58:21.160478 2017] [proxy:debug] [pid 128501] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 08:58:21.160507 2017] [proxy:debug] [pid 128501] proxy_util.c(1936): AH00931: initialized single connection worker in child 128501 for (*)
+[Tue Dec 26 08:58:21.160903 2017] [mpm_prefork:notice] [pid 128500] AH00163: Apache/2.4.6 (CentOS) configured -- resuming normal operations
+[Tue Dec 26 08:58:21.160913 2017] [mpm_prefork:info] [pid 128500] AH00164: Server built: Oct 19 2017 20:39:16
+[Tue Dec 26 08:58:21.160921 2017] [core:notice] [pid 128500] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 26 08:58:21.160933 2017] [mpm_prefork:debug] [pid 128500] prefork.c(1005): AH00165: Accept mutex: sysvsem (default: sysvsem)
+[Tue Dec 26 08:58:21.161288 2017] [proxy:debug] [pid 128503] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 08:58:21.161314 2017] [proxy:debug] [pid 128503] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 08:58:21.161338 2017] [proxy:debug] [pid 128503] proxy_util.c(1936): AH00931: initialized single connection worker in child 128503 for (*)
+[Tue Dec 26 08:58:21.161327 2017] [proxy:debug] [pid 128504] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 08:58:21.161360 2017] [proxy:debug] [pid 128504] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 08:58:21.161383 2017] [proxy:debug] [pid 128504] proxy_util.c(1936): AH00931: initialized single connection worker in child 128504 for (*)
+[Tue Dec 26 08:58:21.161848 2017] [proxy:debug] [pid 128502] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 08:58:21.161867 2017] [proxy:debug] [pid 128502] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 08:58:21.161890 2017] [proxy:debug] [pid 128502] proxy_util.c(1936): AH00931: initialized single connection worker in child 128502 for (*)
+[Tue Dec 26 08:58:21.162054 2017] [proxy:debug] [pid 128505] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 08:58:21.162069 2017] [proxy:debug] [pid 128505] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 08:58:21.162089 2017] [proxy:debug] [pid 128505] proxy_util.c(1936): AH00931: initialized single connection worker in child 128505 for (*)
+[Tue Dec 26 08:58:42.092837 2017] [core:info] [pid 128500] AH00096: removed PID file /run/httpd/httpd.pid (pid=128500)
+[Tue Dec 26 08:58:42.093034 2017] [mpm_prefork:notice] [pid 128500] AH00170: caught SIGWINCH, shutting down gracefully
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: active (running) since Tue 2017-12-26 08:58:21 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 128500 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─128500 /usr/sbin/httpd -DFOREGROUND
+           ├─128501 /usr/sbin/httpd -DFOREGROUND
+           ├─128502 /usr/sbin/httpd -DFOREGROUND
+           ├─128503 /usr/sbin/httpd -DFOREGROUND
+           ├─128504 /usr/sbin/httpd -DFOREGROUND
+           └─128505 /usr/sbin/httpd -DFOREGROUND
+
+Dec 26 08:58:21 localhost.localdomain systemd[1]: Started The Apache HTTP Server.

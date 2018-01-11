@@ -1,0 +1,10 @@
+failed
+ tue core notice pid selinux policy enabled httpd running as context system_u system_r httpd_t
+ tue mime error pid permission denied could not open mime types config file
+ configuration failed
+---------------#splitline#---------------
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

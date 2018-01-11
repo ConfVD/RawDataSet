@@ -1,0 +1,39 @@
+171218 04:37:54 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+171218  4:37:54 [Warning] 'THREAD_CONCURRENCY' is deprecated and will be removed in a future release.
+171218  4:37:54 [Note] /usr/libexec/mysqld (mysqld 5.5.56-MariaDB) starting as process 24466 ...
+171218  4:37:54 InnoDB: The InnoDB memory heap is disabled
+171218  4:37:54 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+171218  4:37:54 InnoDB: Compressed tables use zlib 1.2.7
+171218  4:37:54 InnoDB: Using Linux native AIO
+171218  4:37:54 InnoDB: Initializing buffer pool, size = 384.0M
+171218  4:37:54 InnoDB: Completed initialization of buffer pool
+171218  4:37:54 InnoDB: highest supported file format is Barracuda.
+171218  4:37:54  InnoDB: Waiting for the background threads to start
+171218  4:37:55 Percona XtraDB (http://www.percona.com) 5.5.52-MariaDB-38.3 started; log sequence number 1597945
+171218  4:37:55 [Note] Plugin 'FEEDBACK' is disabled.
+171218  4:37:55 [ERROR] /usr/libexec/mysqld: unknown option '--innodb_data_home_dir/var/lib/mysql'
+171218  4:37:55 [ERROR] Aborting
+
+171218  4:37:55  InnoDB: Starting shutdown...
+171218  4:37:59  InnoDB: Shutdown completed; log sequence number 1597945
+171218  4:37:59 [Note] /usr/libexec/mysqld: Shutdown complete
+
+171218 04:37:59 mysqld_safe mysqld from pid file /var/run/mariadb/mariadb.pid ended
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 04:37:59 EST; 3s ago
+  Process: 24038 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 24037 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=0/SUCCESS)
+  Process: 24006 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 24037 (code=exited, status=0/SUCCESS)
+
+Dec 18 04:37:53 localhost.localdomain mariadb-prepare-db-dir[24006]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 04:37:53 localhost.localdomain mariadb-prepare-db-dir[24006]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 04:37:53 localhost.localdomain mysqld_safe[24037]: sed: -e expression #1, char 31: unknown option to `s'
+Dec 18 04:37:53 localhost.localdomain mysqld_safe[24037]: 171218 04:37:53 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Dec 18 04:37:54 localhost.localdomain mysqld_safe[24037]: 171218 04:37:54 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 04:37:59 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 04:37:59 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 04:37:59 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.

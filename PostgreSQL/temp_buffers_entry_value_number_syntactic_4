@@ -1,0 +1,18 @@
+postgresql.service - PostgreSQL database server
+   Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled)
+   Active: failed (Result: exit-code) since Tue 2017-12-19 03:21:30 EST; 8s ago
+  Process: 106554 ExecStop=/usr/bin/pg_ctl stop -D ${PGDATA} -s -m fast (code=exited, status=0/SUCCESS)
+  Process: 106584 ExecStart=/usr/bin/pg_ctl start -D ${PGDATA} -s -o -p ${PGPORT} -w -t 300 (code=exited, status=1/FAILURE)
+  Process: 106577 ExecStartPre=/usr/bin/postgresql-check-db-dir ${PGDATA} (code=exited, status=0/SUCCESS)
+ Main PID: 106542 (code=exited, status=0/SUCCESS)
+
+Dec 19 03:21:29 localhost.localdomain pg_ctl[106584]: LOCATION:  shmem_exit, ipc.c:211
+Dec 19 03:21:29 localhost.localdomain pg_ctl[106584]: DEBUG:  00000: proc_exit(1): 0 callbacks to make
+Dec 19 03:21:29 localhost.localdomain pg_ctl[106584]: LOCATION:  proc_exit_prepare, ipc.c:183
+Dec 19 03:21:29 localhost.localdomain pg_ctl[106584]: DEBUG:  00000: exit(1)
+Dec 19 03:21:29 localhost.localdomain pg_ctl[106584]: LOCATION:  proc_exit, ipc.c:135
+Dec 19 03:21:30 localhost.localdomain pg_ctl[106584]: pg_ctl: could not start server
+Dec 19 03:21:30 localhost.localdomain pg_ctl[106584]: Examine the log output.
+Dec 19 03:21:30 localhost.localdomain systemd[1]: postgresql.service: control process exited, code=exited status=1
+Dec 19 03:21:30 localhost.localdomain systemd[1]: Failed to start PostgreSQL database server.
+Dec 19 03:21:30 localhost.localdomain systemd[1]: Unit postgresql.service entered failed state.

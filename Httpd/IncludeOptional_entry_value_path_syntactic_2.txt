@@ -1,0 +1,8 @@
+failed
+---------------#splitline#---------------
+ httpd syntax error on line of could not open configuration file no such file or directory
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

@@ -1,0 +1,48 @@
+Loading "fastestmirror" plugin
+Loading "langpacks" plugin
+Adding en_US.UTF-8 to language list
+Adding  to language list
+Config time: 0.008
+Yum version: 3.4.3
+Setting up Package Sacks
+Loading mirror speeds from cached hostfile
+Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os&infra=stock error was
+14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"
+Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=extras&infra=stock error was
+14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"
+Could not retrieve mirrorlist http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=updates&infra=stock error was
+14: curl#6 - "Could not resolve host: mirrorlist.centos.org; Unknown error"
+ * base: mirrors.163.com
+ * extras: mirrors.163.com
+ * updates: mirrors.163.com
+pkgsack time: 0.487
+rpmdb time: 0.001
+tags time: 0.000
+============================== N/S matched: squid ==============================
+squid.x86_64 : The Squid proxy caching server
+Repo        : base
+
+
+
+squid-migration-script.x86_64 : Migration script for squid caching proxy
+Repo        : base
+
+
+
+squid-sysvinit.x86_64 : SysV initscript for squid caching proxy
+Repo        : base
+
+
+
+libecap.i686 : Squid interface for embedded adaptation modules
+Repo        : base
+
+
+
+libecap.x86_64 : Squid interface for embedded adaptation modules
+Repo        : base
+
+
+
+
+  Name and summary matches only, use "search all" for everything.

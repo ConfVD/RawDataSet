@@ -1,0 +1,22 @@
+171218 04:43:02 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+171218  4:43:02 [Warning] 'THREAD_CONCURRENCY' is deprecated and will be removed in a future release.
+171218  4:43:02 [Note] /usr/libexec/mysqld (mysqld 5.5.56-MariaDB) starting as process 38619 ...
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: activating (start-post) since Mon 2017-12-18 04:43:02 EST; 10s ago
+  Process: 38159 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 38190 (mysqld_safe);         : 38191 (mariadb-wait-re)
+   CGroup: /system.slice/mariadb.service
+           ├─38190 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
+           ├─38619 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/mariadb/mariadb.log --pid-file=/var/run/mariadb/mariadb.pid --socket=/var/lib/mysql/mysql.sock --port=3306
+           └─control
+             ├─38191 /bin/sh /usr/libexec/mariadb-wait-ready 38190
+             ├─38666 /bin/sh /usr/libexec/mariadb-wait-ready 38190
+             └─38667 /usr/bin/mysqladmin --no-defaults --socket=/var/lib/mysql/mysql.sock --user=UNKNOWN_MYSQL_USER ping
+
+Dec 18 04:43:02 localhost.localdomain mariadb-prepare-db-dir[38159]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 04:43:02 localhost.localdomain mariadb-prepare-db-dir[38159]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 04:43:02 localhost.localdomain mysqld_safe[38190]: 171218 04:43:02 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Dec 18 04:43:02 localhost.localdomain mysqld_safe[38190]: 171218 04:43:02 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql

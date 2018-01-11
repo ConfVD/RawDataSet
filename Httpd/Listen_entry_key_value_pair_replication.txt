@@ -1,0 +1,15 @@
+failed
+ tue core notice pid selinux policy enabled httpd running as context system_u system_r httpd_t
+ tue suexec notice pid suexec mechanism enabled wrapper
+ tue core crit pid invalid argument make_sock for address apr_socket_opt_set
+ address already in use make_sock could not bind to address
+ address already in use make_sock could not bind to address
+ tue mpm_prefork alert pid no listening sockets available shutting down
+ tue emerg pid unable to open logs exiting
+---------------#splitline#---------------
+ address already in use make_sock could not bind to address
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

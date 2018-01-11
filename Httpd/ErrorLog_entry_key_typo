@@ -1,0 +1,19 @@
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: failed (Result: exit-code) since Tue 2017-12-26 07:03:15 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 124482 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 124480 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 124480 (code=exited, status=1/FAILURE)
+
+Dec 26 07:03:15 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Dec 26 07:03:15 localhost.localdomain httpd[124480]: AH00526: Syntax error on line 47 of /etc/httpd/conf/httpd.conf:
+Dec 26 07:03:15 localhost.localdomain httpd[124480]: Invalid command 'FrrorLog', perhaps misspelled or defined by a module not included in the server configuration
+Dec 26 07:03:15 localhost.localdomain systemd[1]: httpd.service: main process exited, code=exited, status=1/FAILURE
+Dec 26 07:03:15 localhost.localdomain kill[124482]: kill: cannot find process ""
+Dec 26 07:03:15 localhost.localdomain systemd[1]: httpd.service: control process exited, code=exited status=1
+Dec 26 07:03:15 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Dec 26 07:03:15 localhost.localdomain systemd[1]: Unit httpd.service entered failed state.

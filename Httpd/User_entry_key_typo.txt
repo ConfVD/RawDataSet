@@ -1,0 +1,10 @@
+failed
+---------------#splitline#---------------
+ starting the apache http server
+ syntax error on line of
+ invalid command vser perhaps misspelled or defined by module not included in the server configuration
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

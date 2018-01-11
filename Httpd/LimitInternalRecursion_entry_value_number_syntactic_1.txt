@@ -1,0 +1,9 @@
+failed
+---------------#splitline#---------------
+ syntax error on line of
+ the recursion limit must be greater than zero
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

@@ -1,0 +1,8 @@
+failed
+---------------#splitline#---------------
+ httpd service main process exited code exited
+ httpd syntax error on line of serverroot must be valid directory
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

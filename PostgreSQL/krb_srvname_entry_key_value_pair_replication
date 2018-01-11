@@ -1,0 +1,25 @@
+postgresql.service - PostgreSQL database server
+   Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled)
+   Active: active (running) since Tue 2017-12-19 02:41:22 EST; 8s ago
+  Process: 102115 ExecStop=/usr/bin/pg_ctl stop -D ${PGDATA} -s -m fast (code=exited, status=0/SUCCESS)
+  Process: 102126 ExecStart=/usr/bin/pg_ctl start -D ${PGDATA} -s -o -p ${PGPORT} -w -t 300 (code=exited, status=0/SUCCESS)
+  Process: 102120 ExecStartPre=/usr/bin/postgresql-check-db-dir ${PGDATA} (code=exited, status=0/SUCCESS)
+ Main PID: 102129 (postgres)
+   CGroup: /system.slice/postgresql.service
+           ├─102129 /usr/bin/postgres -D /var/lib/pgsql/data -p 5432
+           ├─102131 postgres: checkpointer process                  
+           ├─102132 postgres: writer process                        
+           ├─102133 postgres: wal writer process                    
+           ├─102134 postgres: autovacuum launcher process           
+           └─102135 postgres: stats collector process               
+
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: DEBUG:  00000: exit(0)
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: LOCATION:  proc_exit, ipc.c:135
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: DEBUG:  00000: shmem_exit(-1): 0 callbacks to make
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: LOCATION:  shmem_exit, ipc.c:211
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: DEBUG:  00000: proc_exit(-1): 0 callbacks to make
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: LOCATION:  proc_exit_prepare, ipc.c:183
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: DEBUG:  00000: reaping dead processes
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: LOCATION:  reaper, postmaster.c:2484
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: DEBUG:  00000: server process (PID 102136) exited with exit code 0
+Dec 19 02:41:22 localhost.localdomain pg_ctl[102126]: LOCATION:  LogChildExit, postmaster.c:3068

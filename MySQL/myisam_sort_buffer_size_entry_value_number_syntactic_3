@@ -1,0 +1,76 @@
+171218 04:51:08 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+171218  4:51:08 [Warning] 'THREAD_CONCURRENCY' is deprecated and will be removed in a future release.
+171218  4:51:08 [Note] /usr/libexec/mysqld (mysqld 5.5.56-MariaDB) starting as process 54645 ...
+Unknown suffix 'a' used for variable 'myisam-sort-buffer-size' (value 'abcM')
+171218  4:51:08 [Warning] option 'myisam-sort-buffer-size': unsigned value 0 adjusted to 4096
+171218  4:51:08 [ERROR] /usr/libexec/mysqld: Error while setting value 'abcM' to 'myisam-sort-buffer-size'
+171218  4:51:08 [ERROR] Parsing options for plugin 'MyISAM' failed.
+171218  4:51:08 InnoDB: The InnoDB memory heap is disabled
+171218  4:51:08 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+171218  4:51:08 InnoDB: Compressed tables use zlib 1.2.7
+171218  4:51:08 InnoDB: Using Linux native AIO
+171218  4:51:08 InnoDB: Initializing buffer pool, size = 384.0M
+171218  4:51:08 InnoDB: Completed initialization of buffer pool
+171218  4:51:08 InnoDB: highest supported file format is Barracuda.
+171218  4:51:08  InnoDB: Waiting for the background threads to start
+171218  4:51:09 Percona XtraDB (http://www.percona.com) 5.5.52-MariaDB-38.3 started; log sequence number 1597945
+171218  4:51:09 [Note] Plugin 'FEEDBACK' is disabled.
+171218  4:51:09 [ERROR] mysqld got signal 11 ;
+This could be because you hit a bug. It is also possible that this binary
+or one of the libraries it was linked against is corrupt, improperly built,
+or misconfigured. This error can also be caused by malfunctioning hardware.
+
+To report this bug, see http://kb.askmonty.org/en/reporting-bugs
+
+We will try our best to scrape up some info that will hopefully help
+diagnose the problem, but since we have already crashed, 
+something is definitely wrong and this may fail.
+
+Server version: 5.5.56-MariaDB
+key_buffer_size=402653184
+read_buffer_size=2097152
+max_used_connections=0
+max_threads=153
+thread_count=0
+It is possible that mysqld could use up to 
+key_buffer_size + (read_buffer_size + sort_buffer_size)*max_threads = 1022615 K  bytes of memory
+Hope that's ok; if not, decrease some variables in the equation.
+
+Thread pointer: 0x0
+Attempting backtrace. You can use the following information to find out
+where mysqld died. If you see no messages after this, something went
+terribly wrong...
+stack_bottom = 0x0 thread_stack 0x48000
+/usr/libexec/mysqld(my_print_stacktrace+0x3d)[0x7fa1032da96d]
+/usr/libexec/mysqld(handle_fatal_signal+0x515)[0x7fa102ef0285]
+/lib64/libpthread.so.0(+0xf130)[0x7fa10261d130]
+/usr/libexec/mysqld(_Z18plugin_thdvar_initP3THD+0xfc)[0x7fa102dceabc]
+/usr/libexec/mysqld(_ZN3THD4initEv+0x9a)[0x7fa102d9116a]
+/usr/libexec/mysqld(_ZN3THDC1Ev+0x92e)[0x7fa102d9413e]
+/usr/libexec/mysqld(+0x2cff44)[0x7fa102d1df44]
+/usr/libexec/mysqld(_Z11plugin_initPiPPci+0x844)[0x7fa102dd1c04]
+/usr/libexec/mysqld(+0x2efcca)[0x7fa102d3dcca]
+/usr/libexec/mysqld(_Z11mysqld_mainiPPc+0x5c2)[0x7fa102d40e62]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x7fa100dbeaf5]
+/usr/libexec/mysqld(+0x2e9e6d)[0x7fa102d37e6d]
+The manual page at http://dev.mysql.com/doc/mysql/en/crashing.html contains
+information that should help you find out what is causing the crash.
+171218 04:51:09 mysqld_safe mysqld from pid file /var/run/mariadb/mariadb.pid ended
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 04:51:10 EST; 7s ago
+  Process: 54217 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 54216 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=0/SUCCESS)
+  Process: 54185 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 54216 (code=exited, status=0/SUCCESS)
+
+Dec 18 04:51:08 localhost.localdomain mariadb-prepare-db-dir[54185]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 04:51:08 localhost.localdomain mariadb-prepare-db-dir[54185]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 04:51:08 localhost.localdomain mysqld_safe[54216]: 171218 04:51:08 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Dec 18 04:51:08 localhost.localdomain mysqld_safe[54216]: 171218 04:51:08 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 04:51:10 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 04:51:10 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 04:51:10 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.
+Dec 18 04:51:18 localhost.localdomain systemd[1]: Stopped MariaDB database server.

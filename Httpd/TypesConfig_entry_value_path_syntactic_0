@@ -1,0 +1,19 @@
+[Tue Dec 26 08:34:03.004382 2017] [core:notice] [pid 127580] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Tue Dec 26 08:34:03.004514 2017] [mime:error] [pid 127580] (2)No such file or directory: AH01597: could not open mime types config file /etc/httpd/\\etc/mime.types.
+AH00016: Configuration Failed
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: failed (Result: exit-code) since Tue 2017-12-26 08:34:03 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 127582 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 127580 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 127580 (code=exited, status=1/FAILURE)
+
+Dec 26 08:34:03 localhost.localdomain systemd[1]: httpd.service: main process exited, code=exited, status=1/FAILURE
+Dec 26 08:34:03 localhost.localdomain kill[127582]: kill: cannot find process ""
+Dec 26 08:34:03 localhost.localdomain systemd[1]: httpd.service: control process exited, code=exited status=1
+Dec 26 08:34:03 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Dec 26 08:34:03 localhost.localdomain systemd[1]: Unit httpd.service entered failed state.

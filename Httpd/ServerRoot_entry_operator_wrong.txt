@@ -1,0 +1,8 @@
+failed
+---------------#splitline#---------------
+ httpd syntax error on line of serverroot takes one argument common directory of server related files logs confs etc
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

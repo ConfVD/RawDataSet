@@ -1,0 +1,34 @@
+Config time: 0.005
+Yum version: 3.4.3
+Setting up Package Sacks
+pkgsack time: 0.005
+rpmdb time: 0.000
+tags time: 0.000
+============================== N/S matched: squid ==============================
+squid.x86_64 : The Squid proxy caching server
+Repo        : base
+
+
+
+squid-migration-script.x86_64 : Migration script for squid caching proxy
+Repo        : base
+
+
+
+squid-sysvinit.x86_64 : SysV initscript for squid caching proxy
+Repo        : base
+
+
+
+libecap.i686 : Squid interface for embedded adaptation modules
+Repo        : base
+
+
+
+libecap.x86_64 : Squid interface for embedded adaptation modules
+Repo        : base
+
+
+
+
+  Name and summary matches only, use "search all" for everything.

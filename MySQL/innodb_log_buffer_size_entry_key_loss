@@ -1,0 +1,23 @@
+171218 04:24:17 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+171218  4:24:17 [ERROR] Buffered error: /usr/libexec/mysqld: ambiguous option '--= 8M
+=8M' (performance_schema, performance_schema_max_thread_instances)
+
+171218 04:24:17 mysqld_safe mysqld from pid file /var/run/mariadb/mariadb.pid ended
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 04:24:18 EST; 8s ago
+  Process: 116070 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 116069 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=0/SUCCESS)
+  Process: 116038 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 116069 (code=exited, status=0/SUCCESS)
+
+Dec 18 04:24:17 localhost.localdomain mariadb-prepare-db-dir[116038]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 04:24:17 localhost.localdomain mariadb-prepare-db-dir[116038]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 04:24:17 localhost.localdomain mysqld_safe[116069]: 171218 04:24:17 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Dec 18 04:24:17 localhost.localdomain mysqld_safe[116069]: 171218 04:24:17 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 04:24:18 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 04:24:18 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 04:24:18 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.
+Dec 18 04:24:27 localhost.localdomain systemd[1]: Stopped MariaDB database server.

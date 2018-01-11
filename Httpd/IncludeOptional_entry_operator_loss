@@ -1,0 +1,18 @@
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: failed (Result: exit-code) since Tue 2017-12-26 08:00:12 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 126435 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 126433 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 126433 (code=exited, status=1/FAILURE)
+
+Dec 26 08:00:11 localhost.localdomain httpd[126433]: AH00526: Syntax error on line 91 of /etc/httpd/conf/httpd.conf:
+Dec 26 08:00:11 localhost.localdomain httpd[126433]: Invalid command 'IncludeOptionalconf.d/*.conf', perhaps misspelled or defined by a module not included in the server configuration
+Dec 26 08:00:12 localhost.localdomain systemd[1]: httpd.service: main process exited, code=exited, status=1/FAILURE
+Dec 26 08:00:12 localhost.localdomain kill[126435]: kill: cannot find process ""
+Dec 26 08:00:12 localhost.localdomain systemd[1]: httpd.service: control process exited, code=exited status=1
+Dec 26 08:00:12 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Dec 26 08:00:12 localhost.localdomain systemd[1]: Unit httpd.service entered failed state.

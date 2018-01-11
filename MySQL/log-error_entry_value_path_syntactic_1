@@ -1,0 +1,20 @@
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 05:03:17 EST; 8s ago
+  Process: 86329 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 86328 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=1/FAILURE)
+  Process: 86297 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 86328 (code=exited, status=1/FAILURE)
+
+Dec 18 05:03:16 localhost.localdomain mariadb-prepare-db-dir[86297]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 05:03:16 localhost.localdomain mariadb-prepare-db-dir[86297]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 05:03:16 localhost.localdomain mysqld_safe[86328]: 171218 05:03:16 mysqld_safe Logging to '/var/lib/mysql/var/log/mariadb/mariadb.log'.
+Dec 18 05:03:16 localhost.localdomain mysqld_safe[86328]: 171218 05:03:16 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 05:03:16 localhost.localdomain mysqld_safe[86328]: [114B blob data]
+Dec 18 05:03:16 localhost.localdomain systemd[1]: mariadb.service: main process exited, code=exited, status=1/FAILURE
+Dec 18 05:03:17 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 05:03:17 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 05:03:17 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.
+Dec 18 05:03:26 localhost.localdomain systemd[1]: Stopped MariaDB database server.

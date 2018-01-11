@@ -1,0 +1,11 @@
+failed
+ tue core notice pid selinux policy enabled httpd running as context system_u system_r httpd_t
+ tue core error pid access to file denied by server not regular file
+ tue mime error pid bad file descriptor could not open mime types config file
+ configuration failed
+---------------#splitline#---------------
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

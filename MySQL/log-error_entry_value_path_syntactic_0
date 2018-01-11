@@ -1,0 +1,14 @@
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 05:03:05 EST; 9s ago
+  Process: 85809 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 85808 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=0/SUCCESS)
+  Process: 86264 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=1/FAILURE)
+ Main PID: 85808 (code=exited, status=0/SUCCESS)
+
+Dec 18 05:03:05 localhost.localdomain mariadb-prepare-db-dir[86264]: The directory \var/log/mariadb does not exist.
+Dec 18 05:03:05 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 05:03:05 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 05:03:05 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.

@@ -1,0 +1,19 @@
+[Tue Dec 26 06:38:31.021651 2017] [core:notice] [pid 123463] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Tue Dec 26 06:38:31.022267 2017] [core:emerg] [pid 123463] (22)Invalid argument: AH00024: Couldn't set permissions on the rewrite-map mutex; check User and Group directives
+AH00016: Configuration Failed
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: failed (Result: exit-code) since Tue 2017-12-26 06:38:31 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 123465 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 123463 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 123463 (code=exited, status=1/FAILURE)
+
+Dec 26 06:38:31 localhost.localdomain systemd[1]: httpd.service: main process exited, code=exited, status=1/FAILURE
+Dec 26 06:38:31 localhost.localdomain kill[123465]: kill: cannot find process ""
+Dec 26 06:38:31 localhost.localdomain systemd[1]: httpd.service: control process exited, code=exited status=1
+Dec 26 06:38:31 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Dec 26 06:38:31 localhost.localdomain systemd[1]: Unit httpd.service entered failed state.

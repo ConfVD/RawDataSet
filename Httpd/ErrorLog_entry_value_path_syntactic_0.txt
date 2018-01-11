@@ -1,0 +1,9 @@
+failed
+---------------#splitline#---------------
+ no such file or directory cannot access directory for main error log
+ configuration check failed
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

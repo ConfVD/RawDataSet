@@ -1,0 +1,19 @@
+[Tue Dec 26 08:45:46.080678 2017] [core:notice] [pid 127997] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Tue Dec 26 08:45:46.080835 2017] [mime:error] [pid 127997] (13)Permission denied: AH01597: could not open mime types config file /spirittest/spirit.
+AH00016: Configuration Failed
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: failed (Result: exit-code) since Tue 2017-12-26 08:45:46 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 128001 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 127997 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 127997 (code=exited, status=1/FAILURE)
+
+Dec 26 08:45:46 localhost.localdomain systemd[1]: httpd.service: main process exited, code=exited, status=1/FAILURE
+Dec 26 08:45:46 localhost.localdomain kill[128001]: kill: cannot find process ""
+Dec 26 08:45:46 localhost.localdomain systemd[1]: httpd.service: control process exited, code=exited status=1
+Dec 26 08:45:46 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Dec 26 08:45:46 localhost.localdomain systemd[1]: Unit httpd.service entered failed state.

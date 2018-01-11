@@ -1,0 +1,57 @@
+[Tue Dec 26 06:55:00.582245 2017] [core:notice] [pid 124166] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Tue Dec 26 06:55:00.582872 2017] [suexec:notice] [pid 124166] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Dec 26 06:55:00.593826 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/autoindex.conf at line 21 will probably never match because it overlaps an earlier Alias.
+[Tue Dec 26 06:55:00.593866 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 18 will probably never match because it overlaps an earlier Alias.
+[Tue Dec 26 06:55:00.593869 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 19 will probably never match because it overlaps an earlier Alias.
+[Tue Dec 26 06:55:00.593870 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 20 will probably never match because it overlaps an earlier Alias.
+[Tue Dec 26 06:55:00.593878 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 21 will probably never match because it overlaps an earlier Alias.
+[Tue Dec 26 06:55:00.593880 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 22 will probably never match because it overlaps an earlier Alias.
+[Tue Dec 26 06:55:00.594011 2017] [auth_digest:notice] [pid 124166] AH01757: generating secret for digest authentication ...
+[Tue Dec 26 06:55:00.594051 2017] [auth_digest:debug] [pid 124166] mod_auth_digest.c(250): AH01759: done
+[Tue Dec 26 06:55:00.594709 2017] [slotmem_shm:debug] [pid 124166] mod_slotmem_shm.c(448): AH02301: attach looking for /run/httpd/slotmem-shm-mod_heartmonitor.shm
+[Tue Dec 26 06:55:00.594716 2017] [lbmethod_heartbeat:notice] [pid 124166] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 26 06:55:00.596759 2017] [proxy:debug] [pid 124167] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:55:00.596786 2017] [proxy:debug] [pid 124167] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:55:00.596812 2017] [proxy:debug] [pid 124167] proxy_util.c(1936): AH00931: initialized single connection worker in child 124167 for (*)
+[Tue Dec 26 06:55:00.596970 2017] [proxy:debug] [pid 124168] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:55:00.596988 2017] [proxy:debug] [pid 124168] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:55:00.596975 2017] [proxy:debug] [pid 124169] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:55:00.596994 2017] [proxy:debug] [pid 124169] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:55:00.597009 2017] [proxy:debug] [pid 124168] proxy_util.c(1936): AH00931: initialized single connection worker in child 124168 for (*)
+[Tue Dec 26 06:55:00.597053 2017] [proxy:debug] [pid 124169] proxy_util.c(1936): AH00931: initialized single connection worker in child 124169 for (*)
+[Tue Dec 26 06:55:00.597558 2017] [mpm_prefork:notice] [pid 124166] AH00163: Apache/2.4.6 (CentOS) configured -- resuming normal operations
+[Tue Dec 26 06:55:00.597570 2017] [mpm_prefork:info] [pid 124166] AH00164: Server built: Oct 19 2017 20:39:16
+[Tue Dec 26 06:55:00.597577 2017] [core:notice] [pid 124166] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 26 06:55:00.597586 2017] [mpm_prefork:debug] [pid 124166] prefork.c(1005): AH00165: Accept mutex: sysvsem (default: sysvsem)
+[Tue Dec 26 06:55:00.597765 2017] [proxy:debug] [pid 124170] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:55:00.597786 2017] [proxy:debug] [pid 124170] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:55:00.597807 2017] [proxy:debug] [pid 124170] proxy_util.c(1936): AH00931: initialized single connection worker in child 124170 for (*)
+[Tue Dec 26 06:55:00.598377 2017] [proxy:debug] [pid 124171] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:55:00.598391 2017] [proxy:debug] [pid 124171] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:55:00.598410 2017] [proxy:debug] [pid 124171] proxy_util.c(1936): AH00931: initialized single connection worker in child 124171 for (*)
+[Tue Dec 26 06:55:21.583475 2017] [core:info] [pid 124166] AH00096: removed PID file /run/httpd/httpd.pid (pid=124166)
+[Tue Dec 26 06:55:21.583535 2017] [mpm_prefork:notice] [pid 124166] AH00170: caught SIGWINCH, shutting down gracefully
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: active (running) since Tue 2017-12-26 06:55:00 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 124166 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─124166 /usr/sbin/httpd -DFOREGROUND
+           ├─124167 /usr/sbin/httpd -DFOREGROUND
+           ├─124168 /usr/sbin/httpd -DFOREGROUND
+           ├─124169 /usr/sbin/httpd -DFOREGROUND
+           ├─124170 /usr/sbin/httpd -DFOREGROUND
+           └─124171 /usr/sbin/httpd -DFOREGROUND
+
+Dec 26 06:55:00 localhost.localdomain httpd[124166]: [Tue Dec 26 06:55:00.581692 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/autoindex.conf at line 21 will probably never match because it overlaps an earlier Alias.
+Dec 26 06:55:00 localhost.localdomain httpd[124166]: [Tue Dec 26 06:55:00.581830 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 18 will probably never match because it overlaps an earlier Alias.
+Dec 26 06:55:00 localhost.localdomain httpd[124166]: [Tue Dec 26 06:55:00.581836 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 19 will probably never match because it overlaps an earlier Alias.
+Dec 26 06:55:00 localhost.localdomain httpd[124166]: [Tue Dec 26 06:55:00.581839 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 20 will probably never match because it overlaps an earlier Alias.
+Dec 26 06:55:00 localhost.localdomain httpd[124166]: [Tue Dec 26 06:55:00.581841 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 21 will probably never match because it overlaps an earlier Alias.
+Dec 26 06:55:00 localhost.localdomain httpd[124166]: [Tue Dec 26 06:55:00.581843 2017] [alias:warn] [pid 124166] AH00671: The Alias directive in /etc/httpd/conf.d/welcome.conf at line 22 will probably never match because it overlaps an earlier Alias.
+Dec 26 06:55:00 localhost.localdomain systemd[1]: Started The Apache HTTP Server.

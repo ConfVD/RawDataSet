@@ -1,0 +1,20 @@
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 04:09:20 EST; 8s ago
+  Process: 75094 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 75093 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=0/SUCCESS)
+  Process: 75062 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 75093 (code=exited, status=0/SUCCESS)
+
+Dec 18 04:09:19 localhost.localdomain mysqld_safe[75093]: error: Found option without preceding group in config file: /etc/my.cnf at line: 2
+Dec 18 04:09:19 localhost.localdomain mysqld_safe[75093]: Fatal error in defaults handling. Program aborted
+Dec 18 04:09:19 localhost.localdomain mysqld_safe[75093]: error: Found option without preceding group in config file: /etc/my.cnf at line: 2
+Dec 18 04:09:19 localhost.localdomain mysqld_safe[75093]: Fatal error in defaults handling. Program aborted
+Dec 18 04:09:19 localhost.localdomain mysqld_safe[75093]: 171218 04:09:19 mysqld_safe Logging to '/var/lib/mysql/localhost.localdomain.err'.
+Dec 18 04:09:19 localhost.localdomain mysqld_safe[75093]: 171218 04:09:19 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 04:09:20 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 04:09:20 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 04:09:20 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.
+Dec 18 04:09:29 localhost.localdomain systemd[1]: Stopped MariaDB database server.

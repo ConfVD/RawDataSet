@@ -1,0 +1,24 @@
+[Tue Dec 26 06:48:56.092862 2017] [core:notice] [pid 123928] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Tue Dec 26 06:48:56.093368 2017] [suexec:notice] [pid 123928] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Dec 26 06:48:56.101303 2017] [core:crit] [pid 123928] (22)Invalid argument: AH00069: make_sock: for address [::]:80, apr_socket_opt_set: (IPV6_V6ONLY)
+(98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+(98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+[Tue Dec 26 06:48:56.101410 2017] [mpm_prefork:alert] [pid 123928] no listening sockets available, shutting down
+[Tue Dec 26 06:48:56.101412 2017] [:emerg] [pid 123928] AH00019: Unable to open logs, exiting
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: failed (Result: exit-code) since Tue 2017-12-26 06:48:56 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 123930 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 123928 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 123928 (code=exited, status=1/FAILURE)
+
+Dec 26 06:48:56 localhost.localdomain httpd[123928]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Dec 26 06:48:56 localhost.localdomain systemd[1]: httpd.service: main process exited, code=exited, status=1/FAILURE
+Dec 26 06:48:56 localhost.localdomain kill[123930]: kill: cannot find process ""
+Dec 26 06:48:56 localhost.localdomain systemd[1]: httpd.service: control process exited, code=exited status=1
+Dec 26 06:48:56 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Dec 26 06:48:56 localhost.localdomain systemd[1]: Unit httpd.service entered failed state.

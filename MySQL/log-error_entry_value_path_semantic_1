@@ -1,0 +1,15 @@
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 05:07:40 EST; 9s ago
+  Process: 96828 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 96827 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=0/SUCCESS)
+  Process: 97316 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=1/FAILURE)
+ Main PID: 96827 (code=exited, status=0/SUCCESS)
+
+Dec 18 05:07:40 localhost.localdomain mariadb-prepare-db-dir[97316]: The log file /cba/abc cannot be written, please, fix its permissions.
+Dec 18 05:07:40 localhost.localdomain mariadb-prepare-db-dir[97316]: The daemon will be run under mysql:mysql
+Dec 18 05:07:40 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 05:07:40 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 05:07:40 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.

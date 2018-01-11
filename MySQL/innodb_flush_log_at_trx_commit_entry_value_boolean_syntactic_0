@@ -1,0 +1,30 @@
+171218 04:59:02 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+171218  4:59:02 [Warning] 'THREAD_CONCURRENCY' is deprecated and will be removed in a future release.
+171218  4:59:02 [Note] /usr/libexec/mysqld (mysqld 5.5.56-MariaDB) starting as process 75892 ...
+Unknown suffix 'o' used for variable 'innodb-flush-log-at-trx-commit' (value 'on')
+171218  4:59:02 [ERROR] /usr/libexec/mysqld: Error while setting value 'on' to 'innodb-flush-log-at-trx-commit'
+171218  4:59:02 [ERROR] Parsing options for plugin 'InnoDB' failed.
+171218  4:59:02 [Note] Plugin 'FEEDBACK' is disabled.
+171218  4:59:02 [ERROR] /usr/libexec/mysqld: unknown variable 'innodb_data_home_dir=/var/lib/mysql'
+171218  4:59:02 [ERROR] Aborting
+
+171218  4:59:02 [Note] /usr/libexec/mysqld: Shutdown complete
+
+171218 04:59:02 mysqld_safe mysqld from pid file /var/run/mariadb/mariadb.pid ended
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 04:59:03 EST; 8s ago
+  Process: 75464 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 75463 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=0/SUCCESS)
+  Process: 75432 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 75463 (code=exited, status=0/SUCCESS)
+
+Dec 18 04:59:02 localhost.localdomain mariadb-prepare-db-dir[75432]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 04:59:02 localhost.localdomain mariadb-prepare-db-dir[75432]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 04:59:02 localhost.localdomain mysqld_safe[75463]: 171218 04:59:02 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Dec 18 04:59:02 localhost.localdomain mysqld_safe[75463]: 171218 04:59:02 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 04:59:03 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 04:59:03 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 04:59:03 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.

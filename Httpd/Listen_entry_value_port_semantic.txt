@@ -1,0 +1,11 @@
+failed
+---------------#splitline#---------------
+ permission denied make_sock could not bind to address
+ permission denied make_sock could not bind to address
+ no listening sockets available shutting down
+ unable to open logs
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

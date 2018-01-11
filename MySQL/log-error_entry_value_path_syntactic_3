@@ -1,0 +1,18 @@
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: active (running) since Mon 2017-12-18 05:03:40 EST; 7s ago
+  Process: 86841 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=0/SUCCESS)
+  Process: 86808 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 86840 (mysqld_safe)
+   CGroup: /system.slice/mariadb.service
+           ├─86840 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
+           └─87268 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/mariadb/.err --pid-file=/var/run/mariadb/mariadb.pid --socket=/var/lib/mysql/mysql.sock --port=3306
+
+Dec 18 05:03:38 localhost.localdomain mariadb-prepare-db-dir[86808]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 05:03:38 localhost.localdomain mariadb-prepare-db-dir[86808]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 05:03:38 localhost.localdomain mysqld_safe[86840]: 171218 05:03:38 mysqld_safe Logging to '/var/log/mariadb/.err'.
+Dec 18 05:03:38 localhost.localdomain mysqld_safe[86840]: 171218 05:03:38 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 05:03:40 localhost.localdomain systemd[1]: Started MariaDB database server.
+Dec 18 05:03:48 localhost.localdomain systemd[1]: Stopping MariaDB database server...

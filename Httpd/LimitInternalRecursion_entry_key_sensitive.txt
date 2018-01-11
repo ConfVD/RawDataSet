@@ -1,0 +1,30 @@
+active
+ tue core notice pid selinux policy enabled httpd running as context system_u system_r httpd_t
+ tue suexec notice pid suexec mechanism enabled wrapper
+ tue auth_digest notice pid generating secret for digest authentication
+ tue auth_digest debug pid mod_auth_digest done
+ tue slotmem_shm debug pid mod_slotmem_shm attach looking for
+ tue lbmethod_heartbeat notice pid no slotmem from mod_heartmonitor
+ tue proxy debug pid proxy_util initializing worker proxy reverse shared
+ tue proxy debug pid proxy_util initializing worker proxy reverse local
+ tue proxy debug pid proxy_util initialized single connection worker in child for
+ tue mpm_prefork notice pid centos configured resuming normal operations
+ tue mpm_prefork info pid server built
+ tue proxy debug pid proxy_util initializing worker proxy reverse shared
+ tue proxy debug pid proxy_util initializing worker proxy reverse local
+ tue core notice pid command line foreground
+ tue proxy debug pid proxy_util initializing worker proxy reverse shared
+ tue proxy debug pid proxy_util initializing worker proxy reverse local
+ tue mpm_prefork debug pid prefork accept mutex sysvsem default sysvsem
+ tue proxy debug pid proxy_util initialized single connection worker in child for
+ tue proxy debug pid proxy_util initializing worker proxy reverse shared
+ tue proxy debug pid proxy_util initializing worker proxy reverse local
+ tue proxy debug pid proxy_util initializing worker proxy reverse shared
+ tue proxy debug pid proxy_util initializing worker proxy reverse local
+ tue proxy debug pid proxy_util initialized single connection worker in child for
+ tue proxy debug pid proxy_util initialized single connection worker in child for
+ tue proxy debug pid proxy_util initialized single connection worker in child for
+ tue core info pid removed pid file pid
+ tue mpm_prefork notice pid caught sigwinch shutting down gracefully
+---------------#splitline#---------------
+ started the apache http server

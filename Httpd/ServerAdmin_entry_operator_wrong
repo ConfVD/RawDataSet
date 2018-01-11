@@ -1,0 +1,18 @@
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: failed (Result: exit-code) since Tue 2017-12-26 07:33:37 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+  Process: 125550 ExecStop=/bin/kill -WINCH ${MAINPID} (code=exited, status=1/FAILURE)
+  Process: 125548 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=1/FAILURE)
+ Main PID: 125548 (code=exited, status=1/FAILURE)
+
+Dec 26 07:33:37 localhost.localdomain httpd[125548]: AH00526: Syntax error on line 13 of /etc/httpd/conf/httpd.conf:
+Dec 26 07:33:37 localhost.localdomain httpd[125548]: ServerAdmin takes one argument, The email address of the server administrator
+Dec 26 07:33:37 localhost.localdomain systemd[1]: httpd.service: main process exited, code=exited, status=1/FAILURE
+Dec 26 07:33:37 localhost.localdomain kill[125550]: kill: cannot find process ""
+Dec 26 07:33:37 localhost.localdomain systemd[1]: httpd.service: control process exited, code=exited status=1
+Dec 26 07:33:37 localhost.localdomain systemd[1]: Failed to start The Apache HTTP Server.
+Dec 26 07:33:37 localhost.localdomain systemd[1]: Unit httpd.service entered failed state.

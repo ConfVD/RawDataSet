@@ -1,0 +1,48 @@
+[Tue Dec 26 06:39:49.152370 2017] [core:notice] [pid 123501] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Tue Dec 26 06:39:49.152915 2017] [suexec:notice] [pid 123501] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using localhost.localdomain. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 26 06:39:49.172407 2017] [auth_digest:notice] [pid 123501] AH01757: generating secret for digest authentication ...
+[Tue Dec 26 06:39:49.172481 2017] [auth_digest:debug] [pid 123501] mod_auth_digest.c(250): AH01759: done
+[Tue Dec 26 06:39:49.173504 2017] [slotmem_shm:debug] [pid 123501] mod_slotmem_shm.c(448): AH02301: attach looking for /run/httpd/slotmem-shm-mod_heartmonitor.shm
+[Tue Dec 26 06:39:49.173518 2017] [lbmethod_heartbeat:notice] [pid 123501] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 26 06:39:49.175743 2017] [proxy:debug] [pid 123502] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:39:49.175797 2017] [proxy:debug] [pid 123502] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:39:49.175831 2017] [proxy:debug] [pid 123502] proxy_util.c(1936): AH00931: initialized single connection worker in child 123502 for (*)
+[Tue Dec 26 06:39:49.176428 2017] [mpm_prefork:notice] [pid 123501] AH00163: Apache/2.4.6 (CentOS) configured -- resuming normal operations
+[Tue Dec 26 06:39:49.176462 2017] [mpm_prefork:info] [pid 123501] AH00164: Server built: Oct 19 2017 20:39:16
+[Tue Dec 26 06:39:49.176473 2017] [core:notice] [pid 123501] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 26 06:39:49.176494 2017] [mpm_prefork:debug] [pid 123501] prefork.c(1005): AH00165: Accept mutex: sysvsem (default: sysvsem)
+[Tue Dec 26 06:39:49.176707 2017] [proxy:debug] [pid 123504] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:39:49.176745 2017] [proxy:debug] [pid 123504] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:39:49.176777 2017] [proxy:debug] [pid 123504] proxy_util.c(1936): AH00931: initialized single connection worker in child 123504 for (*)
+[Tue Dec 26 06:39:49.177328 2017] [proxy:debug] [pid 123505] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:39:49.177364 2017] [proxy:debug] [pid 123505] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:39:49.177394 2017] [proxy:debug] [pid 123505] proxy_util.c(1936): AH00931: initialized single connection worker in child 123505 for (*)
+[Tue Dec 26 06:39:49.177633 2017] [proxy:debug] [pid 123503] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:39:49.177674 2017] [proxy:debug] [pid 123503] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:39:49.177704 2017] [proxy:debug] [pid 123503] proxy_util.c(1936): AH00931: initialized single connection worker in child 123503 for (*)
+[Tue Dec 26 06:39:49.177693 2017] [proxy:debug] [pid 123506] proxy_util.c(1843): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 26 06:39:49.177727 2017] [proxy:debug] [pid 123506] proxy_util.c(1885): AH00927: initializing worker proxy:reverse local
+[Tue Dec 26 06:39:49.177755 2017] [proxy:debug] [pid 123506] proxy_util.c(1936): AH00931: initialized single connection worker in child 123506 for (*)
+[Tue Dec 26 06:40:10.131363 2017] [core:info] [pid 123501] AH00096: removed PID file /run/httpd/httpd.pid (pid=123501)
+[Tue Dec 26 06:40:10.131429 2017] [mpm_prefork:notice] [pid 123501] AH00170: caught SIGWINCH, shutting down gracefully
+
+
+httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; disabled)
+   Active: active (running) since Tue 2017-12-26 06:39:49 EST; 19s ago
+     Docs: man:httpd(8)
+           man:apachectl(8)
+ Main PID: 123501 (httpd)
+   Status: "Total requests: 0; Current requests/sec: 0; Current traffic:   0 B/sec"
+   CGroup: /system.slice/httpd.service
+           ├─123501 /usr/sbin/httpd -DFOREGROUND
+           ├─123502 /usr/sbin/httpd -DFOREGROUND
+           ├─123503 /usr/sbin/httpd -DFOREGROUND
+           ├─123504 /usr/sbin/httpd -DFOREGROUND
+           ├─123505 /usr/sbin/httpd -DFOREGROUND
+           └─123506 /usr/sbin/httpd -DFOREGROUND
+
+Dec 26 06:39:49 localhost.localdomain systemd[1]: Starting The Apache HTTP Server...
+Dec 26 06:39:49 localhost.localdomain httpd[123501]: AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using localhost.localdomain. Set the 'ServerName' directive globally to suppress this message
+Dec 26 06:39:49 localhost.localdomain systemd[1]: Started The Apache HTTP Server.

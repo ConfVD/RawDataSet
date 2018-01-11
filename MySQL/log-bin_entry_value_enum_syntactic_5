@@ -1,0 +1,42 @@
+171218 04:40:28 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+171218  4:40:28 [Warning] 'THREAD_CONCURRENCY' is deprecated and will be removed in a future release.
+171218  4:40:28 [Note] /usr/libexec/mysqld (mysqld 5.5.56-MariaDB) starting as process 31764 ...
+171218  4:40:28 InnoDB: The InnoDB memory heap is disabled
+171218  4:40:28 InnoDB: Mutexes and rw_locks use GCC atomic builtins
+171218  4:40:28 InnoDB: Compressed tables use zlib 1.2.7
+171218  4:40:28 InnoDB: Using Linux native AIO
+171218  4:40:28 InnoDB: Initializing buffer pool, size = 384.0M
+171218  4:40:28 InnoDB: Completed initialization of buffer pool
+171218  4:40:28 InnoDB: highest supported file format is Barracuda.
+171218  4:40:28  InnoDB: Waiting for the background threads to start
+171218  4:40:29 Percona XtraDB (http://www.percona.com) 5.5.52-MariaDB-38.3 started; log sequence number 1597945
+171218  4:40:29 [Note] Plugin 'FEEDBACK' is disabled.
+171218  4:40:29 [Note] Server socket created on IP: '0.0.0.0'.
+171218  4:40:29 [Note] Event Scheduler: Loaded 0 events
+171218  4:40:29 [Note] /usr/libexec/mysqld: ready for connections.
+Version: '5.5.56-MariaDB'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MariaDB Server
+171218  4:40:38 [Note] /usr/libexec/mysqld: Normal shutdown
+
+171218  4:40:38 [Note] Event Scheduler: Purging the queue. 0 events
+171218  4:40:38  InnoDB: Starting shutdown...
+171218  4:40:38  InnoDB: Shutdown completed; log sequence number 1597945
+171218  4:40:38 [Note] /usr/libexec/mysqld: Shutdown complete
+
+171218 04:40:39 mysqld_safe mysqld from pid file /var/run/mariadb/mariadb.pid ended
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: active (running) since Mon 2017-12-18 04:40:30 EST; 7s ago
+  Process: 31336 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=0/SUCCESS)
+  Process: 31304 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 31335 (mysqld_safe)
+   CGroup: /system.slice/mariadb.service
+           ├─31335 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
+           └─31764 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/mariadb/mariadb.log --pid-file=/var/run/mariadb/mariadb.pid --socket=/var/lib/mysql/mysql.sock --port=3306
+
+Dec 18 04:40:28 localhost.localdomain mariadb-prepare-db-dir[31304]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 04:40:28 localhost.localdomain mariadb-prepare-db-dir[31304]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 04:40:28 localhost.localdomain mysqld_safe[31335]: 171218 04:40:28 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Dec 18 04:40:28 localhost.localdomain mysqld_safe[31335]: 171218 04:40:28 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 04:40:30 localhost.localdomain systemd[1]: Started MariaDB database server.

@@ -1,0 +1,10 @@
+failed
+ tue core notice pid selinux policy enabled httpd running as context system_u system_r httpd_t
+ tue core emerg pid invalid argument couldn set permissions on the rewrite map mutex check user and group directives
+ configuration failed
+---------------#splitline#---------------
+ httpd service main process exited code exited
+ kill cannot find process
+ httpd service control process exited code exited status
+ failed to start the apache http server
+ unit httpd service entered failed state

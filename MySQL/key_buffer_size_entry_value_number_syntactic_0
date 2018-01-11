@@ -1,0 +1,24 @@
+171218 04:42:51 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Unknown suffix '.' used for variable 'key_buffer_size' (value '384.5M')
+171218  4:42:51 [ERROR] /usr/libexec/mysqld: Error while setting value '384.5M' to 'key_buffer_size'
+171218  4:42:51 [ERROR] Aborting
+
+171218 04:42:51 mysqld_safe mysqld from pid file /var/run/mariadb/mariadb.pid ended
+
+
+mariadb.service - MariaDB database server
+   Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled)
+   Active: failed (Result: exit-code) since Mon 2017-12-18 04:42:52 EST; 8s ago
+  Process: 37712 ExecStartPost=/usr/libexec/mariadb-wait-ready $MAINPID (code=exited, status=1/FAILURE)
+  Process: 37711 ExecStart=/usr/bin/mysqld_safe --basedir=/usr (code=exited, status=0/SUCCESS)
+  Process: 37680 ExecStartPre=/usr/libexec/mariadb-prepare-db-dir %n (code=exited, status=0/SUCCESS)
+ Main PID: 37711 (code=exited, status=0/SUCCESS)
+
+Dec 18 04:42:51 localhost.localdomain mariadb-prepare-db-dir[37680]: Database MariaDB is probably initialized in /var/lib/mysql already, nothing is done.
+Dec 18 04:42:51 localhost.localdomain mariadb-prepare-db-dir[37680]: If this is not the case, make sure the /var/lib/mysql is empty before running mariadb-prepare-db-dir.
+Dec 18 04:42:51 localhost.localdomain mysqld_safe[37711]: 171218 04:42:51 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Dec 18 04:42:51 localhost.localdomain mysqld_safe[37711]: 171218 04:42:51 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Dec 18 04:42:52 localhost.localdomain systemd[1]: mariadb.service: control process exited, code=exited status=1
+Dec 18 04:42:52 localhost.localdomain systemd[1]: Failed to start MariaDB database server.
+Dec 18 04:42:52 localhost.localdomain systemd[1]: Unit mariadb.service entered failed state.
+Dec 18 04:43:01 localhost.localdomain systemd[1]: Stopped MariaDB database server.
